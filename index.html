@@ -1,0 +1,981 @@
+
+<html>
+<head>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88070825-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88070825-1');
+</script>
+
+<meta name="author" content="Juha Nurmonen" />
+<meta name="copyright" content="Juha Nurmonen" />
+
+<link rev="made" href="mailto:juha.nurmonen@haaga-helia.fi">
+    <link rel="stylesheet" href="../styles/nurju_style.css">
+<title>Opiskelumateriaaleja / Juha Nurmonen</title>
+<meta name="keywords" value="opetus, materiaalit, opetusmateriaali, opiskelumateriaali, opiskelu, oppimateriaali, matematiikka, liiketalous, nurmonen, juha">
+</head>
+
+<!--
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+-->
+
+<!--
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88070825-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+-->
+
+<script language="javascript">
+
+// <!--
+function opennew() {
+        window.open()
+}
+//-->
+
+
+</script>
+
+<script language="JavaScript">
+ function palauteIkkuna() {
+     var leveys=650;
+     var korkeus=400;
+     if (document.all) { // IE
+         var xMax = screen.width, yMax = screen.height;
+         leveys=800;
+     }
+     else if (document.layers) { // NS4
+         var xMax = window.outerWidth, yMax = window.outerHeight;
+         var leveys=800;
+         var korkeus=450;
+     }
+     else if (window.outerWidth > 0) { // NS7, MOZ
+         var xMax = window.outerWidth, yMax = window.outerHeight;
+     }
+     else {
+         var xMax = 1024, yMax=768;
+     }
+
+     var xOffset = (xMax - leveys)/2, yOffset = (yMax - korkeus)/2;
+     
+     window.open('cgi-bin/feed.html','FeedBack','width='+leveys+',height='+korkeus+',screenX='+xOffset+',screenY='+yOffset+',top='+yOffset+',left='+xOffset+''); 
+ }   
+ 
+//</script>
+
+<script language="JavaScript">
+
+function writeDateModified (time) {
+
+	// Routines written by John Gardner See www.braemoor.co.uk/software
+
+  var days = new Array;                        // Array to hold day names
+  var months = new Array;                      // Array to hold up month names
+
+  // Load up day names
+  days[0] = "Sunday";
+  days[1] = "Monday";
+  days[2] = "Tuesday";
+  days[3] = "Wednesday";
+  days[4] = "Thursday";
+  days[5] = "Friday";
+  days[6] = "Saturday";
+
+  // Load up month names
+  months[0] = "January";
+  months[1] = "February";
+  months[2] = "March";
+  months[3] = "April";
+  months[4] = "May";
+  months[5] = "June";
+  months[6] = "July";
+  months[7] = "August";
+  months[8] = "September";
+  months[9] = "October";
+  months[10] = "November";
+  months[11] = "December";
+
+  // Assign date variables with document.lastModified 
+  var modDate = new Date(Date.parse(document.lastModified));
+  
+  // If we have a valid date reformat it.
+  if (modDate != 0 && modDate != "Invalid Date") {
+  
+    // Set up day variable to hold the name of the day
+    var day = days[modDate.getDay()];
+    
+    // ndate variable holds day of month
+    var ndate = modDate.getDate();
+    
+    // Set up month variable to hold the name of the month
+    var month = months[modDate.getMonth()];
+    
+    // Get the year and if it is less than 1000 add 1900 to it.
+    var year = modDate.getYear();
+    if (year < 1000) year = year + 1900;
+    
+    // Load up the time variables if required
+    if (time) {
+      var hour = modDate.getHours().toString();
+      if (hour.length == 1) hour = "0" + hour; 
+      var minute = modDate.getMinutes().toString();
+      if (minute.length == 1) minute = "0" + minute;
+      var second = modDate.getSeconds().toString();
+      if (second.length == 1) second = "0" + second;
+    }
+    
+    // Display date and time document was last updated.
+    document.write(day + " " + ndate + " " + month + " " + year+ "  ");
+    if (time) {
+      document.write(hour + ":" + minute + ":" + second);
+    }
+  }
+	else document.write("not available");
+}
+
+</script>
+
+<!--
+<script language="javascript">
+document.onmousedown=disableclick;
+status="Right Click Disabled";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+</script>
+-->
+
+<body  bgcolor="#f6c6b6"   background="../kuvat/pii.jpg" text="#000000"  
+link="#0906ff" vlink="#050399" alink="#ff0000">
+
+<!--
+bgcolor="#00CC60"
+-->
+
+<!-- old logo
+src="http://www.haaga-helia.fi/sites/all/themes/haagahelia/images/logo.png"
+ -->
+
+<font face="Helvetica, Verdana, Arial, sans-serif">
+
+<table align=center  border=0 cellspacing=3
+cellpadding=6>
+<tr>
+
+<td valign="middle"><a href="https://webmyy.haagahelia.amk/nurju/"
+onMouseOver="window.status='HH Juha profile'; return true">
+<img src="../kuvat/jn_photo.jpg" 
+ align=top height=100 width=80 hspace=70 border=0 alt=" "></a>
+
+<td valign="middle"><h2>Juha Nurmonen &ndash; <br>
+<!--
+<br><img src=" " 
+align=top height=100 width=150 hspace=70 border=0 alt=" "> <br> 
+-->
+opiskelumateriaaleja
+</h2>  
+
+<td valign="middle">
+<a href="http://www.haaga-helia.fi/"
+onMouseOver="window.status='Haaga-Helia amk'; return true">
+<img src="https://www.haaga-helia.fi/themes/custom/hh/logo.png"
+ align=top height=50 width=130 hspace=70 border=0 alt=" "></a>
+</table>
+
+<p>
+Tälle sivulle on koottu linkkejä tekemiini julkisiin liiketalouden matematiikan ja rahoituslaskennan opiskelumateriaaleihin.
+</p>
+<hr>
+<div class="alku">
+<font size=-1>
+    Tällä sivulla: <a href="./index.html#liiketalouden-matematiikka">Liiketalouden matematiikan materiaaleja</a> &ndash; <a href="./index.html#tilasto">Tilasto</a> &ndash; <a href="./index.html#rahoitus">Rahoituksen laskennan materiaaleja</a> &ndash; <a href="./index.html#malleja">Päätöksentekomalleja</a> &ndash; <a href="./index.html#ohjelmointi">Ohjelmointi</a> &ndash; <a href="./index.html#data-analytics-basics">Data Analytics</a> &ndash; <a href="./index.html#tyovalineet">Työvälineet</a>
+</font>
+</div>
+
+<div>
+<font size=-1>
+    Tällä sivulla: <a href="./index.html#liiketalouden-matematiikka">Liiketalouden matematiikan materiaaleja</a> &ndash; <a href="./index.html#tilasto">Tilasto</a> &ndash; <a href="./index.html#rahoitus">Rahoituksen laskennan materiaaleja</a> &ndash; <a href="./index.html#malleja">Päätöksentekomalleja</a> &ndash; <a href="./index.html#ohjelmointi">Ohjelmointi</a> &ndash; <a href="./index.html#data-analytics-basics">Data Analytics</a> &ndash; <a href="./index.html#tyovalineet">Työvälineet</a>
+</font>
+</div>
+
+<hr>
+<h2><a name="liiketalouden-matematiikka">Liiketalouden matematiikan materiaaleja</a></h2>
+<ul>
+<li>Moodle-sivu: <a href="http://hhmoodle.haaga-helia.fi/course/view.php?id=11502" target="_blank">
+Liiketalouden matematiikan verkkotehtäviä ja materiaaleja</a> (Haaga-Helia amk:n tunnus vaaditaan). Laaja materiaali- ja tehtäväkokoelma liiketalouden matematiikan asioista prosenttilaskuista investointilaskelmiin ja (lähes?) kaikesta siltä väliltä. 
+</ul>
+
+<img src="https://webmyy.haagahelia.amk/menetelmat/kuvat/Finance_functions_Excel.PNG" align=center height=30% width=90% hspace=50 vspace=10 border=0 onMouseOver="window.status='Finance functions in Excel';return true" alt="Finance-functions-Excel-image" />
+
+<h3>Liiketalouden matematiikan aihealueiden videoita</h3>
+
+Kaikissa seuraavissa videoissa aiheena on Microsoft Excel -ohjelman käyttäminen aihealueen laskujen hyödyntämisessä. Samalla itse aihettakin käsitellään monipuolisesti.
+
+<ul>
+<li>Indeksit, aikasarjat, rahanarvon ja ostovoiman muutokset
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Aikasarjat_ja_indeksit/0_7y226oy0"  target="_blank"
+onMouseOver="window.status='Indeksit ja aikasarjojen esittäminen'; 
+return true">Indeksit ja aikasarjojen esittäminen</a> &ndash; mp4-video, kesto 1h 09min, tehty 10.2.2014
+
+</ul>
+
+<li><a
+href="https://video.haaga-helia.fi/media/Rahoituslaskennan_perusteet_Excel-laskeminen/0_mn37lh52"  target="_blank"
+onMouseOver="window.status='Excel-laskeminen ja todelliset korot'; 
+return true">Excel-laskemisen perusteet ja todelliset korot</a> &ndash; mp4-video, kesto 1h 19min, tehty 25.4.2014
+</ul>
+
+Seuraavissa videoissa kussakin käydään läpi kolme kyseisen aihealueen keskeistä laskuesimerkkiä.
+
+<ul>
+<li>Perusprosenttilaskut
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Taulukkolaskentaohjelman+k%C3%A4ytt%C3%A4minen+yleens%C3%A4+ja+prosenttilaskujen+yhteydess%C3%A4+erityisesti/0_azazm2zj"  target="_blank"
+onMouseOver="window.status='Taulukkolaskentaohjelma ja perusprosenttilaskut'; 
+return true">Kaltura-video, tehty 17.1.2019, kesto 31 min</a>
+</ul>
+
+<li>Katetuottolaskelmat
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Katetuottolaskelma_peruslaskuja/0_pmzmtwg9"  target="_blank"
+onMouseOver="window.status='Katetuottolaskelma, hinnoittelu ja kriittinen myyntimäärä'; 
+return true">Kaltura-video, tehty 1.3.2019, kesto 18 min</a></li> (tässä videossa ääni viallinen!)
+</ul>
+
+<li>Yksinkertainen korkolasku
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Yksinkertaisen+korkolaskun+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_ni681nmy"  target="_blank"
+onMouseOver="window.status='Yksinkertainen korkolasku'; 
+return true">Kaltura-video, tehty 17.5.2017, kesto 20 min</a></li>
+</ul>
+
+<li>Koronkorkolasku
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Koronkorkolaskuesimerkkej%C3%A4+Excel-ohjelmalla+23-5-2017/0_zbllyvxf"  target="_blank"
+onMouseOver="window.status='Koronkorkolasku'; 
+return true">Kaltura-video, tehty 23.5.2017, kesto 33 min</a>
+</ul>
+
+<li>Jaksolliset maksut
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Jaksollisten+suoritusten+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_q7v28bug"  target="_blank" 
+onMouseOver="window.status='Jaksolliset maksut'; 
+return true">Kaltura-video, tehty 28.4.2017, kesto 32 min</a>
+<li><a
+href="https://video.haaga-helia.fi/media/Jaksollisten+suoritusten+laskuesimerkkej%C3%A4+Excel-ohjelmalla+-+05-06-2017/0_j1urtvsp"  target="_blank" 
+onMouseOver="window.status='Jaksolliset maksut'; 
+return true">Kaltura-video, tehty 5.6.2017, kesto 40 min</a>
+</ul>
+
+
+<li>Lainalaskut
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Lainalaskujen+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_c69vbnia"  target="_blank" 
+onMouseOver="window.status='Lainalaskut'; 
+return true">Kaltura-video, tehty 28.4.2017, kesto 21 min</a>
+<li><a
+href="https://video.haaga-helia.fi/media/Lainalaskuesimerkkej%C3%A4+Excel-ohjelmalla+-+05-06-2017/0_km12mpxz"  target="_blank" 
+onMouseOver="window.status='Lainalaskut'; 
+return true">Kaltura-video, tehty 5.6.2017, kesto 33 min</a>
+</ul>
+
+<li>Osamaksut ja leasing
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Osamaksujen+ja+leasingin+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_vwaq7w1s"  target="_blank" 
+onMouseOver="window.status='Osamaksut ja leasing'; 
+return true">Kaltura-video, tehty 28.4.2017, kesto 18 min</a>
+<li><a
+href="https://video.haaga-helia.fi/media/Osamaksu-+ja+leasinglaskuja+Excel-ohjelmalla+-+05-06-2017/0_k2kxqoo0"  target="_blank" 
+onMouseOver="window.status='Osamaksut ja leasing'; 
+return true">Kaltura-video, tehty 5.6.2017, kesto 26 min</a>
+</ul>
+
+<li>Todelliset korot
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Todellisten+korkojen+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_5f0omb7b"  target="_blank" 
+onMouseOver="window.status='Todelliset korot'; 
+return true">Kaltura-video, tehty 28.4.2017, kesto 15 min</a>
+<li><a
+href="https://video.haaga-helia.fi/media/Todellisten+vuosikorkojen+laskuesimerkkej%C3%A4+Excel-ohjelmalla+-+06-06-2017/0_vmhwiq1w"  target="_blank" 
+onMouseOver="window.status='Todelliset korot'; 
+return true">Kaltura-video, tehty 6.6.2017, kesto 28 min</a>
+</ul>
+
+<li>Investoinnit
+<ul>
+<li><a
+href="https://video.haaga-helia.fi/media/Investointien+laskuesimerkkej%C3%A4+Excel-ohjelmalla/0_39ykzacu"  target="_blank" 
+onMouseOver="window.status='Investoinnit'; 
+return true">Kaltura-video, tehty 28.4.2017, kesto 11 min</a>
+<li><a
+href="https://video.haaga-helia.fi/media/Investointilaskuesimerkkej%C3%A4+Excel-ohjelmalla+-+06-06-2017/0_onmffozl"  target="_blank" 
+onMouseOver="window.status='Investoinnit'; 
+return true">Kaltura-video, tehty 6.6.2017, kesto 14 min</a>
+</ul>
+
+</ul>
+
+
+
+
+<!-- CC-lisensointi -->
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br /><font size="-1">Nämä materiaalit on tehnyt Juha Nurmonen ja ne on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a></font>.
+
+<!-- Tilaston oppituntitallenteita -->
+
+<hr />
+
+<h2><a id="tilasto">Tilasto</a></h2>
+
+<h3>Oppituntitallenteita</h3>
+
+<ul>    
+
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen-RDI1LH101C-ilta-2022-0331-taulukot/0_96y20inm">Analysointiosaaminen RDI1LH101C, ilta, 31.3.2022, taulukot, Pivot-taulukot</a>
+</li>
+
+    
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen-RDI1LH101C-ilta-2021-1109-tunnusluvut/0_1pqujqod">Analysointiosaaminen RDI1LH101C, ilta, 9.11.2021, tunnusluvut</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen-RDI1LH101C-paiva-2021-1110-tunnusluvut/0_l7riurh1">Analysointiosaaminen RDI1LH101C, päivä, 10.11.2021, tunnusluvut</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen-RDI1LH101C-ilta-2021-1111-korrelaatio/0_ilsvvu83">Analysointiosaaminen RDI1LH101C, ilta, 11.11.2021, korrelaatio</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen-RDI1LH101C-paiva-2021-1117-korrelaatio/0_r45hnu6p">Analysointiosaaminen RDI1LH101C, päivä, 17.11.2021, korrelaatio</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Tilastollisen+paattelyn+perusteet/0_322l34qe">Analysointiosaaminen RDI1LH101C, päivä, 24.11.2021, tilastollisen päättelyn perusteet</a></li>
+
+<li><a href="https://video.haaga-helia.fi/media/Analysointiosaaminen+RDI1LH101CA+Tilastollisen+merkitsevyyden+laskeminen/0_3yj2s67z">Analysointiosaaminen RDI1LH101C, päivä, 1.12.2021, tilastollisen merkitsevyyden laskeminen</a></li>
+
+</ul>
+
+<ul>
+
+<li><a href="https://video.haaga-helia.fi/media/Liiketoiminnan+analytiikan+perusteet+--+kurssin+kaytanteet/0_znfmpzzu">Liiketoiminnan analytiikan perusteet: Kurssin käytänteet ma 19.8.2024 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Liiketoiminnan+analytiikan+perusteetA+taulukot/0_8mqrmd6o">Liiketoiminnan analytiikan perusteet: Taulukot ma 19.8.2024 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Liiketoiminnan+analytiikan+perusteetA+Korrelaatio+ja+regressio/0_3efe00vb">Liiketoiminnan analytiikan perusteet: Korrelaatio ja regressio ma 2.9.2024 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Liiketoiminnan+analytiikan+perusteetA+Aikasarjat%2C+ilta+11.9.2023/0_1eu0zuis">Luentotunti Aikasarjat ma 11.9.2023 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Tilastollinen_paattely_teoria_2023_0918+_video/0_xq1c8onp">Luentotunti Tilastollinen päättely, teoria, ma 18.9.2023 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Liiketoiminnan+analytiikan+perusteet%2C+esimerkki+tilastollisen+p%C3%A4%C3%A4ttelyn+teht%C3%A4v%C3%A4st%C3%A4/0_dplu1zxj">Liiketoiminnan analytiikan perusteet, esimerkki tilastollisen päättelyn tehtävästä ma 2.10.2023 (Juha Nurmonen, mp4-video)</a>
+</li>
+
+
+</ul>
+
+<h4>Tilastolliseen analysointiin liittyvä video</a></h4>
+
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Tilastokeskuksen+tietokantahaku%2C+tunnuslukujen+laskeminen+aggregate-funktiolla+ja+aineiston+muokkaaminen/0_kthl49ck"  target="_blank" 
+onMouseOver="window.status='Tietokantahaku, tunnusluvut, muokkaaminen'; 
+return true">
+Eräs esimerkki Tilastokeskuksen tietokantahausta, tunnuslukujen laskemisesta, Excelin aggregate-funktion käytöstä sekä aineiston ja taulukoiden muokkaamisesta</a>, Kaltura-video, tehty 7.4.2020, kesto 39 min
+<br />Video osina:</li>    
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Esimerkki+Tilastokeskuksen+tietokantahausta/0_x3l0c5oj" target="_blank" onMouseOver="window.status='Tilaskokeskuksen tietokantahaku'; return true">
+Esimerkki Tilastokeskuksen tietokantahausta</a>, Kaltura-video, tehty 7.4.2020, kesto 14 min</li>
+<li><a href="https://video.haaga-helia.fi/media/Tunnuslukujen+laskeminen+Excelin+aggregate-funktion+avulla/0_jo9ajk6p" target="_blank" onMouseOver="sindow.status='Tunnuslukujen laskeminen aggregate-funktiolla'; return true">
+Tunnuslukujen laskeminen Excelin aggregate-funktion avulla</a>, Kaltura-video, tehty 7.4.2020, kesto 20 min</li>
+<li><a href="https://video.haaga-helia.fi/media/Esimerkki+aineiston+ja+taulukoiden+muokkaamisesta/0_i57rbnqb" target="_blank" onMouseOver="window.status='Esimerkki Excel-aineiston muokkaamisesta'; return true">
+Esimerkki aineiston ja taulukoiden muokkaamisesta</a>, Kaltura-video, tehty 7.4.2020, kesto 7 min</li>
+</ul>
+</ul>
+
+
+<!-- CC-lisensointi -->
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br /><font size="-1">Nämä materiaalit on tehnyt Juha Nurmonen ja ne on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a></font>.
+
+    
+<hr>
+
+<h2><a name="rahoitus">Rahoituksen laskentaa</a></h2>
+
+
+<ul>
+<li><a href="https://www.slideshare.net/juhanurmonen/">Slideshare</a>: 
+<ul>
+<li><a href="https://www.slideshare.net/juhanurmonen/investointilaskelmat-123566310">Investointilaskelmat</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/tuoton-odotusarvo-ja-riski/">Tuoton odotusarvo ja riski</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/regressio-ja-normaalijakauma">Regressio ja normaalijakauma</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/jatkuva-korko">Jatkuva korkolasku</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/tuotto-ja-riskilukuja">Tuotto- ja riskilukuja</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/korkosijoitusten-hinnoittelu-korkoriski">Korkosijoitusten hinnoittelu ja korkoriski</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/johdannaisten-perusteista-123566300">Johdannaisten perusteista</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/optioiden-hinnoittelusta">Optioiden hinnoittelusta</a>
+<li><a href="https://www.slideshare.net/juhanurmonen/osakesarjoihin-liittyv-teknist-analyysia">Osakesarjoihin liittyvää teknistä analyysia</a>
+</ul>
+</ul>
+
+
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/financial-calculations/blob/main/investoinnit.ipynb">Investointien peruslaskelmia Pythonilla</a>
+</li>
+</ul>
+
+<!--
+<ul>
+<li><a href="https://drive.google.com/open?id=1n7kvY9rpyeX_f7FQcG5fo2D5TjhwGfjR">Laskentaesimerkkejä perusrahoitusfunktioista</a> (Excel-tiedosto)
+<li><a href="https://drive.google.com/open?id=1X0FLLKQL__d0QDlZGfNNpxJA2juG_kcT">Entä jos -laskentaesimerkki</a> (Excel-tiedosto)
+<li><a href="https://drive.google.com/open?id=1g6__Hb4CpGnbouD2nobYrp6SZ6SGA-5C">Skenaarion laskentaesimerkki</a> (Excel-tiedosto)
+</ul>
+-->
+
+<!--
+
+<dl>
+<dd><a href="https://drive.google.com/open?id=1sEwGTUZmwOnfKqQL-rw21vQ6dItWRq0D">Kaikki materiaalien Excel-liitteet</a>
+</dl>
+
+-->
+
+<!-- CC-lisensointi -->
+    
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br /><font size="-1">Nämä materiaalit on tehnyt Juha Nurmonen ja ne lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a></font>.
+
+<hr>
+
+<h2><a name="malleja">Päätöksenteon matematiikkaa</a></h2>
+
+<dl>
+More to be added.
+</dl>
+
+<dl>
+Ks. myös <a href="https://github.com/juhanurmonen/decision-making/">@github/juhanurmonen</a>
+</dl>
+
+<ul>
+
+<li><a href="https://video.haaga-helia.fi/media/Strategiset+paatoksentekomallit+lyhyt+kurssikuvaus/0_o1lt6ghy">Kurssin lyhyt esittely</a> (mp4)
+</li>
+
+<li><strong>Investointilaskelmat</strong></li>
+<ul>
+
+<li><a href="https://www.slideshare.net/juhanurmonen/investointilaskelmat-123566310">Investointilaskelmat (Slideshare)</a>
+</li>
+
+<li><a href="https://nbviewer.org/github/juhanurmonen/financial-calculations/blob/main/investoinnit.ipynb">Investointilaskelmat Pythonilla</a>
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/Strategiset+paatoksentekomallitA+Investoinnit/0_8l0zad05">Oppituntitallenne 21.8.2024</a> (mp4, kesto 1h 19min)
+</li>
+</ul>
+
+<li><strong>Heuristinen päätöksenteko</strong></li>
+<ul>
+
+<li><a href="https://haagahelia-my.sharepoint.com/:b:/g/personal/nurju_haaga-helia_fi/EQQUM1RS9YdEt7qB2_l0bzkBwYfWJmFGLUnQ_y_naAQKDg?e=T8gfd2">Heuristinen ongelmanratkaisu</a>  (pdf)
+</li>
+
+<li><a href="https://video.haaga-helia.fi/media/P%C3%A4%C3%A4toksentekomallitA+Heuristinen+p%C3%A4%C3%A4toksenteko/0_r6z7ydc8">Oppituntitallenne 28.8.2024</a> (mp4, kesto 1h 3min)
+</li>
+</ul>
+
+<li><strong>Päätöspuut</strong></li>
+
+<ul>
+<li><a href="https://haagahelia-my.sharepoint.com/:b:/g/personal/nurju_haaga-helia_fi/EXdjNU3k005AjAfrinuA4eoBOaYM_vJWcvGuQvYIQ3_Lng?e=L5ULR5">Päätöspuut</a> (pdf)
+</li>
+<li><a href="https://video.haaga-helia.fi/media/2024_0904_Paatoksentekomallit_Paatospuut/0_n2il45c7">Oppituntitallenne 4.9.2024</a> (mp4, kesto 53 min)
+</ul>
+
+<li><strong>Verkkoteoria</strong></li>
+
+<ul>
+<li><a href="https://haagahelia-my.sharepoint.com/:b:/g/personal/nurju_haaga-helia_fi/Ef6Czcu9hrREgdJB-R3uvokBVMP7DS9JWzbrBE6T-CxJEA?e=So1kH2">Johdatusta verkkoteoriaan</a> (pdf)
+<li><a href="https://nbviewer.org/github/juhanurmonen/decision-making/blob/main/verkkoteoria.ipynb">Johdatusta verkkoteoriaan ja Gantt-kaaviot</a></li>
+</ul>
+
+<li><strong>Lineaarinen optimointi</strong></li>
+
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/decision-making/blob/main/lineaarinen_optimointi.ipynb">Lineaarinen optimointi</a></li>
+</ul>
+
+<li><strong>Varastoteoria: Optimaalinen ostoerä</strong></li>
+
+<li><strong>Simulointi</strong></li>
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/decision-making/blob/main/Monte_Carlo_simulointi_Pythonilla.ipynb">Monte Carlo -simulointi Pythonilla</a></li>
+</ul>
+
+<li><strong>Velan optimointi</strong></li>
+
+<li><strong>Peliteoria</strong></li>
+
+</ul>
+
+<!-- CC-lisensointi -->
+    
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br /><font size="-1">Nämä materiaalit on tehnyt Juha Nurmonen ja ne lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a></font>.
+
+<hr>
+<h2><a name="ohjelmointi">Analysointia Python-ohjelmointikielellä</a></h2>
+    
+    
+<ul>
+<li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/">GitHub-juhanurmonen</a></li>
+<ul>
+<li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/tunnuslukujen-ja-muutoksen-laskeminen-ja-kuvailu/blob/master/Muutoksen_suuruuden_laskeminen_ja_sen_kuvailu.ipynb">Tunnuslukujen ja muutoksen suuruuden laskeminen ja kuvailu</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/aikasarjat-liukuvat-tunnusluvut/blob/master/Aikasarjojen-kuvaaminen.ipynb">Osakekurssien aikasarjoja ja liukuvia tunnuslukuja Pythonilla</a>
+<li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/symbolinen-laskenta/blob/master/symbolinen-laskenta.ipynb">Symbolista laskentaa Pythonin sympy-kirjastolla</a>
+<li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/numeerinen-laskenta/blob/master/numeerinen-laskenta.ipynb">Numeerista laskentaa Pythonin numpy-kirjaston avulla</a></li>
+<li>Regressio (tulossa)
+<ul>
+    <li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/lineaarisen-regressiomallin-oletukset/blob/master/lineaarisen-regression-oletukset.ipynb">Lineaarisen regressiomallin käytön edellytykset</a></li>
+    <li><a href="https://nbviewer.jupyter.org/github/juhanurmonen/Osakekurssin-kuvailua-lineaarisen-regression-oletukset/blob/main/Osakekurssin_kuvailua_ja_lineaarisen_regression_oletukset_osake_Qt.ipynb">Osakekurssin kuvailua ja lineaarisen regression oletusten tarkistaminen</a></li>
+<li>Perusanalysointi
+<li>Haastavampia tapauksia
+</ul>
+
+<li><a href="https://github.com/juhanurmonen/python-excel-yhteiskaytto/blob/main/README.md">Pythonin ja Excelin yhteiskäyttö</a>
+</li>
+        
+</ul>
+</ul>
+
+
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Google+Colaboratoryn+k%C3%A4ytt%C3%B6%C3%B6notto/0_v3x8tlzp">Google Colaboratoryn käyttöönotto 24.8.2023, Data-analytiikka</a> (videotallenne)</li>
+</ul>
+
+    
+<hr />
+    
+<!-- Data Analytics -->
+
+
+<h2><a name="data-analytics-basics">Basics of Data Analytics with Python</a></h2>
+
+<!--
+    <a href="https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/FB5B/production/_127774346_gettyimages-937217984.jpg"
+       onMouseOver="window.status='Photo of living Python'; return true">
+<img src="https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/FB5B/production/_127774346_gettyimages-937217984.jpg"
+     align=top height=80 width=200 hspace=70 border=0 alt="[Photo of living Python]"></a>
+-->
+    
+<a href="https://en.wikipedia.org/wiki/Monty_Python#Things_named_after_Monty_Python"
+       onMouseOver="window.status='Photo of living Python'; return true">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Monty_Python_Live_02-07-14_12_56_41_%2814415567757%29.jpg/220px-Monty_Python_Live_02-07-14_12_56_41_%2814415567757%29.jpg"
+     align=top height=150 width=200 hspace=70 border=0 alt="[Photo of The Ministry of Silly Walks by The Pythons]"></a>    
+
+<ul>
+    
+<li><strong>Introduction</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-introduction/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://webmyy.haagahelia.amk/menetelmat/Data-analytiikka/Teaching/en/data_analytics.pdf">
+    Introduction to Data Analytics</a> (pdf)
+	
+	&ndash; <a href="https://video.haaga-helia.fi/media/Data-Analytics-Python-Jupyter-Introduction/0_1i7p10mo">mp4 video</a> 
+    
+	</li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-introduction/blob/main/Installing_Anaconda.ipynb">
+    Install Anaconda</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-introduction/blob/main/Jupyter_Notebook.ipynb">
+    Learn how to use Jupyter Notebook</a></li>
+</ul>
+
+    
+<li><strong>Preparing Data</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-prepare-data/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://webmyy.haagahelia.amk/menetelmat/Data-analytiikka/Teaching/en/preparing_data.pdf">
+    Preparing data (pdf)</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/Python_pandas_introduction.ipynb">Python and pandas &ndash; first steps</a></li>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Data+AnalyticsA+First+steps+with+Python%2C+Pandas+and+Google+Colab/0_hmfv5zr4">mp4-video, 24 Oct, 2023</a> (2h 13 min)</li>
+</ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/open_Excel.ipynb">
+    Open data in a dataframe from Excel file</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/open_csv.ipynb">
+    Open data in a dataframe from csv file</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/study_data.ipynb">
+    Study the data</a>
+	
+	&ndash; <a href="https://video.haaga-helia.fi/media/Basics+of+data+analyticsA+Studying+the+data/0_k2pcemki">mp4 video</a> 
+    
+	
+	</li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/alter_data.ipynb">
+    Alter the data</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/filter_sort_data.ipynb">
+    Filtering and sorting</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-prepare-data/blob/main/value_counts.ipynb">
+    value_counts()</a></li>
+</ul>
+    
+    
+<li><strong>Descriptive Analytics</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-descriptive-analytics/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://webmyy.haagahelia.amk/menetelmat/Data-analytiikka/Teaching/en/descriptive_analytics.pdf">
+    Descriptive analytics (pdf)</a>     
+    </li>
+
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-descriptive-analytics/blob/main/Descriptive_analytics_Best_practices.ipynb">
+    Descriptive analytics &ndash; Best practices</a></li>
+
+<ul>
+
+<li><a href="https://video.haaga-helia.fi/media/Kaltura+Capture+recording+-+helmikuu+3.+2022%2C+8A10A44+pm/0_ko2alujy">mp4 video, 3 Feb, 2022</a> (1h 52 min)
+</li>
+
+<li>
+<a href="https://video.haaga-helia.fi/media/Data+AnalyticsA+Descriptive+Analytics%2C+4+April%2C+2024/0_jt9pqqcs">mp4 video, 4 Apr, 2024</a> (2h 5 min)
+</li>
+
+</ul>
+
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-descriptive-analytics/blob/main/frequency_distribution.ipynb">
+    Frequency distribution</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-descriptive-analytics/blob/main/statistical_numbers.ipynb">
+    Describing numerical variables using statistical numbers</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-descriptive-analytics/blob/main/classified_distribution.ipynb">
+    Classified distribution of numerical variable</a></li>
+</ul>
+
+<li><strong>Diagnostic Analytics</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-diagnostic-analytics/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://webmyy.haagahelia.amk/menetelmat/Data-analytiikka/Teaching/en/diagnostic_analytics.pdf">
+    Diagnostic analytics (pdf)</a>
+        
+    </li>
+    
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-diagnostic-analytics/blob/main/Diagnostic_analytics_Best_practices.ipynb">
+    Diagnostic analytics &ndash; Best practices</a></li>
+
+<ul>
+
+<li> <a href="https://video.haaga-helia.fi/media/Diagnostic_Analytics_2022-0207/0_mscg454x">mp4 video, 7 Feb, 2022</a> (1h 37 min)
+</li>
+
+<li> <a href="https://video.haaga-helia.fi/media/Data+AnalyticsA+Diagnostic+Analytics%2C+8+April%2C+2024/0_1lubrfcj">mp4 video, 8 April, 2024</a> (2h 26 min)
+</li>
+
+</ul>
+
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-diagnostic-analytics/blob/main/cross_tabulation.ipynb">
+    Cross-tabulation</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-diagnostic-analytics/blob/main/comparing_statistical_numbers.ipynb">
+    Comparing statistical numbers between groups</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-diagnostic-analytics/blob/main/correlation.ipynb">
+    Correlation</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-diagnostic-analytics/blob/main/pivot.ipynb">
+    Pivot tables</a></li>
+</ul>
+
+<li><strong>Time Series</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-time-series/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/time_labels.ipynb">
+    Opening text formatted time information</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/install-packages.ipynb">Install libraries</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/time_series.ipynb">
+    Time series</a></li>
+	<ul>
+	<li><a href="https://video.haaga-helia.fi/media/Describing+and+Analysing+Time+Series+2024-04-15/0_y3pxppdp">mp4 video, 15 April, 2024</a> (2h 12 min)</li>
+	</ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/dwellings.ipynb">
+    Link to automatically updating data in Statistics Finland database</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/econdb.ipynb">
+    Econdb</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/open_CO2.ipynb">
+    Opening CO2 data</a></li>
+<!--
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series/blob/main/covid-19.ipynb">
+    Following COVID-19 statistics</a></li>
+-->
+</ul>
+    
+    
+<li><strong>Time Series Forecasting</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-time-series-forecasting/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series-forecasting/blob/main/time_series_forecasting_part_one.ipynb">
+    Time series with no trend nor seasonal variation</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series-forecasting/blob/main/time_series_forecasting_part_two.ipynb">
+    Time series with noticeable trend</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-time-series-forecasting/blob/main/time_series_forecasting_part_three.ipynb">
+    Time series with both trend and seasonal variation</a></li>
+</ul>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/2024-0425-Data-Analytics-Time-Series-Forecasting/0_r5z3lrna">mp4 video, 25 April, 2024</a> (1h 55min)</li>
+</ul>   
+   
+<li><strong>Machine Learning</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-machine-learning/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-machine-learning/blob/main/machine-learning-concepts.ipynb">Concepts of Machine Learning</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-machine-learning/blob/main/machine-learning-scikit-library.ipynb">Machine Learning and scikit-learn Library</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-machine-learning/blob/main/data_preparation_for_machine_learning.ipynb">Data Preparation for Machine Learning</a></li>
+</ul>
+    
+<li><strong>Regression</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-regression/">@github/juhanurmonen</a>)</li>
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/linear_regression_one_variable.ipynb">
+    Linear regression with one variable</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/linear_regression_many_variables.ipynb">
+    Linear regression with several variables</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/regression_demanding_part_one.ipynb">
+    Regression &ndash; more demanding case; Part one</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/regression_demanding_part_two.ipynb">
+    Regression &ndash; more demanding case; Part two</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/regression_demanding_part_three.ipynb">
+    Regression &ndash; more demanding case; Part three</a></li>
+<li><a href="http://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/compare-regression-models.ipynb">Comparing regression models</a></li>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Data+AnalyticsA+Supervised+Machine+Learning%2C+Regression/0_xx7ngnlu">mp4-video, 28 Nov, 2023</a> (48 min)</li>
+<li><a href="https://video.haaga-helia.fi/media/2024_0429_Data_Analytics_Machine_Learning_Regression/0_cehykekb">mp4-video, 29 April, 2024</a> (2h 01 min)</li>
+</ul>
+<li><a href="http://nbviewer.org/github/juhanurmonen/data-analytics-basics-regression/blob/main/regression_with_categorical_variables.ipynb">Regression with categorical variables</a></li>
+</ul>
+    
+    
+<li><strong>Classification</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-classification/">@github/juhanurmonen</a>)</li>
+<ul>
+    <li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/classification_K_nearest_neighbors.ipynb">Classification model K-nearest neigbours</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/classification_decision_trees.ipynb">
+    Classification model Decision tree</a></li>
+	<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/classification_example_decision_tree.ipynb">
+    Another example of Classification model Decision tree</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/classification_gaussian_naive_bayes.ipynb">
+    Classification model Gaussian Naive Bayes</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/classification_logistic_regression.ipynb">
+    Logistic regression</a></li>  
+<li><a href="http://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/compare-classification-models.ipynb">Comparing classification models</a></li>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Data_Analytics_2023_1205_Supervised_Machine_Learning_Classification/0_p31tcmmp">mp4-video, 5 Dec, 2023</a> (2h 37 min)</li>
+<li><a href="https://video.haaga-helia.fi/media/2024-0506-Data-Analytics-Machine-Learning-Classification/0_srnqbe5h">mp4-video, 6 May, 2024</a> (2h 25min)</li>
+</ul>
+<li><a href="http://nbviewer.org/github/juhanurmonen/data-analytics-basics-classification/blob/main/credit_card_frauds.ipynb">Credit card frauds</a></li>    
+
+</ul>
+
+<br />
+
+<li><strong>Miscellaneous</strong> (<a href="https://github.com/juhanurmonen/data-analytics-basics-miscellaneous/">@github/juhanurmonen</a>)</li>
+
+<ul>
+
+<li><a href="http://nbviewer.org/github/juhanurmonen/data-analytics-basics-miscellaneous/blob/main/Jupyter_Excel_tandem.ipynb">Working with Jupyter and Microsoft Excel in tandem</a></li>
+
+</ul>    
+
+</ul>
+
+<!-- Assignments 
+
+<ul>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-assignments/blob/main/Data_Analytics_Basics_Assignment1.ipynb">
+    Assignment 1</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-assignments/blob/main/Data_Analytics_Basics_Assignment2.ipynb">
+    Assignment 2</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-assignments/blob/main/Data_Analytics_Basics_Assignment3.ipynb">
+    Assignment 3</a></li>
+<li><a href="https://nbviewer.org/github/juhanurmonen/data-analytics-basics-assignments/blob/main/Data_Analytics_Basics_Assignment4.ipynb">
+    Assignment 4</a></li>
+</ul>
+
+-->
+
+<hr />
+
+<h2><a name="tyovalineet">Työvälineohjeita</a></h2>
+
+<ul>
+<li>Moodle</li>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Moodle-tentin+satunnaiset+kysymykset+ja+liitetiedostot/0_k83v4f0h">Moodle-tentin satunnaiset kysymykset ja liitetiedostot</a>, Kaltura-video, 19 min
+</li>
+</ul>
+<li>
+<a href="https://webmyy.haagahelia.amk/nurju/public/IT-HH/Julkisen_linkin_tekeminen.pdf">Julkisen linkin tekeminen (pdf)</a>, ihan yleisesti ja erityisesti Haaga-Helia amk:n järjestelmissä, myös Moodlessa
+</li>
+<ul>
+<li><a href="https://video.haaga-helia.fi/media/Julkisen+linkin+tekeminen+ja+tiedoston+jakaminen+myy-osoitteella/0_vrr35kol">Julkisen linkin tekeminen ja tiedoston jakaminen myy-aseman kautta</a>, Kaltura-video, kesto 10 min
+</li>
+<li>
+<a href="https://video.haaga-helia.fi/media/Linkin+tekeminen+ja+tiedoston+jakaminen+Microsoft+OneDriven+kautta/0_ni2fazx4">Julkisen linkin tekeminen ja tiedoston jakaminen Microsoftin OneDriven kautta</a>, Kaltura-video, kesto 9 min
+</li>
+<li>
+<a href="https://video.haaga-helia.fi/media/Julkisen+linkin+tekeminen+ja+tiedostojen+jakaminen+Goog+Driven+kautta/0_r2v672ie">Julkisen linkin tekeminen ja tiedoston jakaminen Googlen Driven kautta</a>, Kaltura-video, kesto 7 min
+</li>
+<li>
+<a href="https://video.haaga-helia.fi/media/Verkko-osoitteen+lis%C3%A4%C3%A4minen+Moodleen/0_fq2ce73i">Verkko-osoitteen avulla jakaminen Moodlessa (Moodlen versio 3.5)</a>, Kaltura-video, kesto 9 min
+</li>
+</ul>
+</ul>
+
+<!-- CC-lisensointi -->
+    
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons -lisenssi" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<br /><font size="-1">Nämä materiaalit on tehnyt Juha Nurmonen ja ne lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Nimeä-JaaSamoin 4.0 Kansainvälinen -lisenssillä</a></font>.
+    
+<hr />
+    
+<!--
+<hr><a href="https://plus.google.com/+hhjuhanurmonen/about"
+onMouseOver="window.status='Parallel reality site'; return true">&nbsp</a> 
+<hr>
+-->
+
+<h3><a name=continfo><img
+src=http://www.helsinki.fi/hy/palaut2.gif border=0 alt=###>
+Yhteystiedot</h3>  
+
+<!--
+
+<table align=center width=80% border=2 cellspacing=3
+cellpadding=6><tr><td>
+<DL><DT> <strong>Address</strong>: 
+<DD><a href="http://www.haaga-helia.fi/fi/koulutus/ammattikorkeakoulututkinnot/liiketalouden-koulutus-tradenomi"
+onMouseOver="window.status='Business Programmes'; return true"> 
+Business Programmes</a>
+<DD><a href=http://www.haaga-helia.fi/
+onMouseOver="window.status='Haaga-Helia homepage'; 
+return true"> Haaga-Helia University of Applies Sciences</a>
+
+<DD>
+BEGIN Vanha kommentoitu
+<a href=http://www.hel.fi/grafiikka/keskus.gif
+onMouseOver="window.status='Map of the city center'; return true">  
+
+<a href="http://www.helsinki.fi/kumpula/english/"
+onMouseOver="window.status='Kumpula Campus'; return true">  
+Vanha kommentoitu END
+
+<a href="http://www.haaga-helia.fi/fi/tietoa-haaga-heliasta/yhteystiedot/pasila">Pasila Campus</a> / 
+<a href="http://maps.google.com/maps?q=ratapihantie+13,+helsinki,+finland">
+Ratapihantie 13</a>
+<DD>FI-00520 <a
+href=http://www.hel.fi/ 
+onMouseOver="window.status='Homepage of Helsinki'; return true">
+Helsinki</a> 
+<DD> <a href="http://www.finland.fi/"
+onMouseOver="windows.status='Visit Finland'; return true"> 
+Finland </a><P>
+
+BEGIN Vanha kommentoitu:
+<DT><strong>E-mail</strong>: <a
+href="mailto:juha.nurmonen@haaga-helia.fi" 
+onMouseOver="window.status='Mail me'; return true">
+juha.nurmonen(a)haaga-helia.fi</a>
+</DL><P>
+<td valign="middle"><DL><DT> <strong>Office</strong>: 7029 (7th
+floor)
+<DT> <strong>Office hours</strong>: N/A <P>
+<DT> <strong>Assistants' duty room</strong> (425)
+<strong>hours</strong>: N/A <P> 
+<DT><strong>Telephone</strong>: (+358-9-) 191 22878
+<DT><strong>Telefax</strong>:   (+358-9-) 191 23213
+</DL>
+Vanha kommentoitu END
+
+
+<td valign="middle"><DL><DT> <strong>Post</strong>: At <a href="http://www.haaga-helia.fi/fi/haaga-heliasta/kampukset/pasila">Pasila Campus</a>;<br> available also at <a href="https://connect.funet.fi/hh_juhanurmonen/">Adobe Connect online meeting room </a> (by appointment only)
+<DT><strong>E-mail/Lync</strong>: <a
+href="mailto:juha.nurmonen@haaga-helia.fi" 
+onMouseOver="window.status='Mail me'; return true">
+juha.nurmonen(a)haaga-helia.fi</a>
+
+<DT><P><strong><a href="https://e-lomake.haaga-helia.fi/lomakkeet/15431/lomake.html"
+onMouseOver="windows.status='Contact form'; return true">
+Contact form</a></strong><P>
+
+BEGIN Vanha kommentoitu
+<DT><strong>Office hours</strong>: <a href="http://asio-public.haaga-helia.fi/kalenterit2/index.php?av_v=1&ctila=1057&kt=hlo&laji=Henkil%F6t%7C%7C&guest=%2Fhaaga&lang=eng&ui=&tiedot=kaikki&ss_ttkal=&ccv=&yhopt=&b=1382515502&av_y=0">Available by request</a>; 
+<DT><strong>Telephone</strong>: N/A  +358 40 488 7026
+Vanha kommentoitu END
+</DL>
+</table>
+
+-->
+
+<!--
+- <a
+href="javascript:palauteIkkuna()">Feedback form</a>  
+
+<hr>
+
+-->
+
+<div class="w3-container w3-red">
+Ks. <a href="https://webmyy.haagahelia.amk/nurju/"
+onMouseOver="window.status='Homepage'; return true">
+Juha Nurmonen @Haaga-Helia</a> 
+</div>
+
+<hr>
+
+<!--
+<img
+src="https://webmyy.haagahelia.amk/nurju/kuvat/maili.gif" align=top
+border=0 hspace=2 alt=" ">
+-->
+
+
+<!-- Vanha, perusmuoto
+<script>
+document.write('Last modified: ');
+document.write(document.lastModified);
+</script>  <br>
+-->
+
+<font
+face="Verdana, Arial, Helvetica, sans-serif" size="-1">
+<script type="text/javascript">
+document.write('Last modified: ');
+writeDateModified (true);</script>
+</font>
+
+<br>
+
+<a href="javascript: history.go(-1)"
+onMouseOver="window.status='Go back'; return true"><font
+face="Verdana, Arial, Helvetica, sans-serif" size="-1">Back</font></a>
+</font>
+</body>
+</html>
